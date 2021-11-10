@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      html,
+      body {
+        margin: 0px;
+        overflow: hidden;
+      }
+
+      .full-screen-container {
+        background: linear-gradient(aqua , pink 65%);
+        height: 100vh;
+        width: 100vw;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .login-container {
+        background-color: hsla(201, 100%, 6%, 0.6);
+        padding: 30px 30px;
+        min-width: 400px;
+        width: 50%;
+        max-width: 600px;
+      }
+
+      .login-title {
+        color: white;
+        text-align: center;
+        margin: 0;
+        margin-bottom: 40px;
+        font-size: 2.5em;
+        font-weight: normal;
+      }
+      .input-group{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+      }
+
+      .input-group label {
+        color: white;
+        font-size: 1.5em;
+        font-weight: lighter;
+        margin-bottom: 5px;
+      }
+
+      .input-group-cap{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 10px;
+        align-items: center;
+      }
+
+      .input-group-cap img {
+         width: 80%;
+         height: 100px;
+         background-color: white;
+      }
+
+      .refresh-button{
+        color: white;
+        width:20px;
+        height: 30px;
+        background:none;
+        border: none;
+        outline: none;
+        margin-left: 40px;
+        cursor: pointer;
+      }
+  
+      .input-group input {
+        font-size: 1.5em;
+        padding: 0.1em 0.25em;
+        background-color: hsla(201, 100%, 91%, 0.3);
+        color: whitesmoke;
+        outline: none;
+        border: 1px solid hsl(201, 100%, 6%);
+        border-radius: 5px;
+        font-weight: lighter;
+      }
+
+      .input-group input:focus {
+        border: 1px solid hsl(201, 100%, 50%);
+      }
+
+      .login-button {
+        padding: 10px 30px;
+        width: 100%;
+        border-radius: 5px;
+        background-color: hsla(201, 100%, 50%, 0.1);
+        border: 1px solid hsl(201, 100%, 50%);
+        outline: none;
+        font-weight: lighter;
+        font-size: 1.5em;
+        color: white;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+
+      .login-button:hover {
+        background-color: hsla(201, 100%, 50%, 0.3);
+      }
+      .login-button:focus {
+        background-color: hsla(201, 100%, 50%, 0.5);
+      }
+
+      a{
+        text-decoration: none;
+        color:white ;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="full-screen-container">
+      <div class="login-container">
+        <h3 class="login-title">Welcome</h3>
+        <form action="">
+          <div class="input-group">
+            <label for="name">Name</label>
+            <input type="name" id="name" name="name" />
+          </div>
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" />
+          </div>
+          <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" />
+          </div>
+          <div class="input-group-cap">
+            <img src="images/image1.jpg" alt="..." class="slider-img">
+            <button type="button" class="refresh-button" onclick="next()" >>>></button>
+          </div>
+          <div class="input-group">
+            <label for="capt">Captcha</label>
+            <input type="text" id="capt" name="capt" />
+          </div>
+          <button type="button" class="login-button" onclick="goLink()">Log In</button>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
